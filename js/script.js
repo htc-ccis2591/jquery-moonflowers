@@ -7,7 +7,7 @@
         $("<p>").text("Click a menu item to view a picture.").insertBefore(espresso);
 
 
-        var menuItems = $("menu").$("#menu-item");
+        var menuItems = $("menu").("#menu-item");
 
         var item;
         for (var i = 0; i < menuItems.length; i++) {
@@ -23,6 +23,8 @@
                 $("#aside-image").attr("src", imgSrc);
                 $("#aside-image").removeAttr("class");
                 
-                
+           
             });
+        }
+    });
 })();
