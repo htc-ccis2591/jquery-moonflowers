@@ -1,26 +1,28 @@
-var menu = document.getElementById("menu");
-var espresso = document.getElementById("espresso");
+(function () {
+    $(document).ready(function () {
 
-var p = document.createElement("p");
-console.log(p)
-var msg = document.createTextNode("Click a menu item to view a picture.");
-p.appendChild(msg);
-menu.insertBefore(msg, espresso);
+        var menu = $("#menu");
+        var espresso = $("#espresso");
 
-var menuItems = menu.getElementsByClassName("menu-item");
+        $("<p>").text("Click a menu item to view a picture.").insertBefore(espresso);
 
-var item;
-for (var i = 0; i < menuItems.length; i++ ) {
-    item = menuItems[i];
 
-    item.nextElementSibling.setAttribute("class", "hide");
+        var menuItems = $("menu").$("#menu-item");
 
-    // Attach event handler
-    item.onclick = function () {
+        var item;
+        for (var i = 0; i < menuItems.length; i++) {
+            item = menuItems[i];
 
-        imgSrc = this.nextElementSibling.getAttribute("src");
+            $("item").next().attr("class", "hide");
 
-        document.getElementById("aside-image").setAttribute("src", imgSrc);
-        document.getElementById("aside-image").removeAttribute("class");
-    }
-}   
+            // Attach event handler
+            $(item).click(function() {
+
+                $("imgSrc") = $(this).next().attr("src");
+
+                $("#aside-image").attr("src", imgSrc);
+                $("#aside-image").removeAttr("class");
+                
+                
+            });
+})();
