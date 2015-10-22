@@ -24,3 +24,14 @@ Note that you can still put this in your IIFE. You don’t always want everythin
 
 ## Use jQuery functions for DOM Manipulation
 Replace the use of `document.getElementById` with the jQuery function.  Use jQuery functions for things like the JavaScript `nextElementSibling`, `getAttribute()`, `setAttribute()`, etc.
+
+For example:
+```
+    $("<p>").text("Click a menu item to view a picture.").insertBefore($espresso);
+
+    // The line above is the same as the following:
+    //var $p = $("<p>");
+    //$p.text("Click a menu item to view a picture.");
+    //$p.insertBefore($espresso);
+```
+    
