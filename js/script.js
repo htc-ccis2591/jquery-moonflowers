@@ -6,25 +6,14 @@
 
         $("<p>").text("Click a menu item to view a picture.").insertBefore(espresso);
 
+        $("menu-item").attr("class", "hide");
 
-        var menuItems = $("menu").("#menu-item");
+        // Attach event handler
+        $("#aside-image").click(function () {
 
-        var item;
-        for (var i = 0; i < menuItems.length; i++) {
-            item = menuItems[i];
+            $("imgSrc") = $(this).next().attr("src");
 
-            $("item").next().attr("class", "hide");
-
-            // Attach event handler
-            $(item).click(function() {
-
-                $("imgSrc") = $(this).next().attr("src");
-
-                $("#aside-image").attr("src", imgSrc);
-                $("#aside-image").removeAttr("class");
-                
-           
-            });
-        }
+            $("#aside-image").attr("src", imgSrc).removeAttr("class");
+        });
     });
 })();
