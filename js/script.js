@@ -1,26 +1,19 @@
-var menu = document.getElementById("menu");
-var espresso = document.getElementById("espresso");
+(function () {
+    $(document).ready(function () {
+    var espresso = $("#espresso");
+ 
 
-var p = document.createElement("p");
-console.log(p)
-var msg = document.createTextNode("Click a menu item to view a picture.");
-p.appendChild(msg);
-menu.insertBefore(msg, espresso);
+        $("<p>").text("Click a menu item to view a picture.").insertBefore(espresso);
 
-var menuItems = menu.getElementsByClassName("menu-item");
+        $("img").attr("class", "hide");
 
-var item;
-for (var i = 0; i < menuItems.length; i++ ) {
-    item = menuItems[i];
+    
+            $(".menu-item").click(function () {
 
-    item.nextElementSibling.setAttribute("class", "hide");
+        var pic = $(this).next().attr("src");
 
-    // Attach event handler
-    item.onclick = function () {
+                $("#aside-image").attr("src", pic).removeAttr("class");
+            });
+        });
 
-        imgSrc = this.nextElementSibling.getAttribute("src");
-
-        document.getElementById("aside-image").setAttribute("src", imgSrc);
-        document.getElementById("aside-image").removeAttribute("class");
-    }
-}   
+    })();
