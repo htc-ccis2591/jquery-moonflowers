@@ -1,9 +1,7 @@
 (function () {
     $(document).ready(function () {
 
-        var espresso = $("#espresso");
-
-        $("<p>").text("Click a menu item to view a picture.").insertBefore(espresso);
+        $("<p>").text("Click a menu item to view a picture.").insertBefore("#espresso");
 
         $("img").attr("class", "hide");
 
