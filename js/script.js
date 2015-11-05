@@ -1,8 +1,8 @@
 $(document).ready(function() {
     
-var menu = $("menu");
+var menu = $("#menu");
 console.log(menu)    
-var espresso = $("espresso");
+var $espresso = $("espresso");
 console.log(espresso)
 var p = $("p").add("p");
 var hideClass = $("img").addClass("hide");
@@ -20,14 +20,16 @@ console.log(p)
 //console.log(append);    
     //p.appendChild(msg);
 //menu.insertBefore(msg, espresso);
-var menuItems = $(".menu-item").find();
+var $menuItems = $(".menu-item");
+    $menuItems.next().attr("class", "hide");
+    $menuItems.click(function() {
 //var menuItems = menu.getElementsByClassName("menu-item");
-console.log(menuItems);
+console.log($menuItems);
     
-var item;
-for (var i = 0; i < $.length; i++ ) {
-    item = [i];
-    
+//var item;
+//for (var i = 0; i < $.length; i++ ) {
+//    item = [i];
+//    
 //    $("img").next().attr("class, hide");
 //    item.nextElementSibling.setAttribute("class", "hide");
     
@@ -37,13 +39,15 @@ for (var i = 0; i < $.length; i++ ) {
 //    item.onclick = function () {
     console.log(click)  
 
-        var imgSrc = $("<img>.src");
-//      imgSrc = this.nextElementSibling.getAttribute("src");
+        var imgSrc = $(this).next().attr("src")
+        $("#aside-image").attr("src", imgSrc).removeAttr("class");
         console.log(imgSrc);
        
 
         $("#aside-image.src").attr("imgSrc");
         $("#aside-image").removeAttr("class");
-    })
-}   
+    });
+//    };
 });
+   
+}());
