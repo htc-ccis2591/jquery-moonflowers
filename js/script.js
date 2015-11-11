@@ -1,26 +1,34 @@
-var menu = document.getElementById("menu");
-var espresso = document.getElementById("espresso");
+(function () {
+    $(document).ready(function () {
+        $("<p>").text("Click a menu item to view a picture.").insertBefore("#espresso");
 
-var p = document.createElement("p");
-console.log(p)
-var msg = document.createTextNode("Click a menu item to view a picture.");
-p.appendChild(msg);
-menu.insertBefore(msg, espresso);
+        $("img").attr("class", "hide");
 
-var menuItems = menu.getElementsByClassName("menu-item");
+        // Attach event handler
+        $(".menu-item").click(function () {
+            var imgSrc = $(this).next().attr("src");
+            $("#aside-image").attr("src", imgSrc).removeAttr("class", "hide")
+        });
+    });
+})();
 
-var item;
-for (var i = 0; i < menuItems.length; i++ ) {
-    item = menuItems[i];
 
-    item.nextElementSibling.setAttribute("class", "hide");
+//  ----------------------------------------------------------------------------
 
-    // Attach event handler
-    item.onclick = function () {
+// Mary's code
 
-        imgSrc = this.nextElementSibling.getAttribute("src");
+// (function() {
+// var $menu = $("#menu");
+// var $espresso = $("#espresso");
 
-        document.getElementById("aside-image").setAttribute("src", imgSrc);
-        document.getElementById("aside-image").removeAttribute("class");
-    }
-}   
+// $("<p>Click a menu item to view a picture.</p>").insertbefore($espresso);    
+// OR
+// $espresso.before ( $("<p>Click on a menu item to view a picture.</p>") );
+
+// var $menuItems = $( ".menu-item");
+// $menuItems.next().attr("class", "hide");
+// $menuItems.click(function () {
+//     imgSrc = $this.next().attr("src");
+//  $"#aside-image").attr("src", imgSrc).removeAttr("class");
+// });
+// }());
