@@ -1,8 +1,8 @@
 # jQuery Moonflower's Coffee Menu
-Completing this assignment depends on knowing:
+Completing this assignment depends on knowing how to use:
 
-- basic JavaScript to create variables, arrays, if/else statements and for loops
-- how to use a CDN to include jQuery in your page
+- a CDN to include jQuery in your page
+- the jQuery ready function to keep your variables out of global scope
 - jQuery methods for selecting and navigating the DOM Tree
 - jQuery methods for adding and removing attributes
 - jQuery methods for creating a new element and appending it to the DOM
