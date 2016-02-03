@@ -21,4 +21,4 @@ For this assignment, you will transform the page with JavaScript & jQuery, alter
 
 If you look at the HTML provided, you’ll see an image tag in the aside.  This is the image that displays on the right side.  You can show one of the menu item images by filling in the appropriate value for the src attribute.  That value comes from the corresponding “hidden” image in the menu list.
 
-All of this magic is done by adding a few click handler and by adding and removing attribute values.
+All of this magic is done by adding a few click handlers and by adding and removing attribute values.
