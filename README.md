@@ -12,6 +12,7 @@ https://github.com/htc-ccis2591/jquery-moonflowers
 
 You’ll want to begin each assignment by forking the repository and cloning it locally.  When you are done, you’ll push to GitHub and submit a pull request.
 
+
 ## Moonflower’s Coffee Shop
 Open the web page in a browser.  You’ll see that it loads a page with an image for each item on the menu.  
 In the spirit of progressive enhancement, the page may not be amazingly beautiful, but all the info is visible without any JavaScript.
