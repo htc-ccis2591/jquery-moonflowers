@@ -13,6 +13,8 @@ var item;
 for (var i = 0; i < menuItems.length; i++ ) {
     item = menuItems[i];
 
+    // This next line no longer works 
+    // the .hide has been removed from the CSS file
     item.nextElementSibling.setAttribute("class", "hide");
 
     // Attach event handler
