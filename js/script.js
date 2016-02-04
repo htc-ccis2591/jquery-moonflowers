@@ -1,26 +1,11 @@
-var menu = document.getElementById("menu");
-var espresso = document.getElementById("espresso");
+$(function() {
+    $("h1").after("<p>Click a menu item to view a picture.</p>")
 
-var p = document.createElement("p");
-console.log(p)
-var msg = document.createTextNode("Click a menu item to view a picture.");
-p.appendChild(msg);
-menu.insertBefore(msg, espresso);
+    $(".menu-item").on("click", function() {
+        var imgscr = $(this).next().attr("src"); 
+        $("#aside-image").attr("src", imgscr).show();
+    });
 
-var menuItems = menu.getElementsByClassName("menu-item");
-
-var item;
-for (var i = 0; i < menuItems.length; i++ ) {
-    item = menuItems[i];
-
-    item.nextElementSibling.setAttribute("class", "hide");
-
-    // Attach event handler
-    item.onclick = function () {
-
-        imgSrc = this.nextElementSibling.getAttribute("src");
-
-        document.getElementById("aside-image").setAttribute("src", imgSrc);
-        document.getElementById("aside-image").removeAttribute("class");
-    }
-}   
+    $("img").hide(); //hides item
+});
+    
