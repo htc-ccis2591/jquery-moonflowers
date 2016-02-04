@@ -11,9 +11,7 @@ $ (function() {
     var $menuItems = $('li');   
     
     $menuItems.on('click', function () {
-        
-        console.log(this);
-        
+                
         itemsrc = $(this).children('img').attr('src');
         
         $('#aside-image').attr('src',itemsrc);
