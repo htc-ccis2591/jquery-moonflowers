@@ -1,3 +1,6 @@
+
+
+/*
 var menu = document.getElementById("menu");
 var espresso = document.getElementById("espresso");
 
@@ -25,4 +28,4 @@ for (var i = 0; i < menuItems.length; i++ ) {
         document.getElementById("aside-image").setAttribute("src", imgSrc);
         document.getElementById("aside-image").removeAttribute("class");
     }
-}   
+}*/   
