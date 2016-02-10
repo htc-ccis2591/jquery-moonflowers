@@ -1,4 +1,4 @@
-var menu = document.getElementById("menu");
+/*var menu = document.getElementById("menu");
 var espresso = document.getElementById("espresso");
 
 var p = document.createElement("p");
@@ -25,4 +25,13 @@ for (var i = 0; i < menuItems.length; i++ ) {
         document.getElementById("aside-image").setAttribute("src", imgSrc);
         document.getElementById("aside-image").removeAttribute("class");
     }
-}   
+}*/
+
+$(function(){
+	$('img').hide();
+	$('h2').after('<p>Click on the item to see the pictures</p>');
+	$('.menu-item').on('click', function(){
+		var asideImage = $(this).next().attr('src');
+		$('#aside-image').attr('src', asideImage).show();
+	});
+})
