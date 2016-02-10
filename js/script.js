@@ -5,7 +5,7 @@ $('img').hide();
 
 // Placing the text
 
-$('h2').after('<p>Click on an Item to view the picture!</p>');
+$('h2').before('<p>Click on an Item to view the picture!</p>');
 
 
 var $listparts = $('li');
