@@ -1,28 +1,24 @@
-var menu = document.getElementById("menu");
-var espresso = document.getElementById("espresso");
+// Hiding Function
 
-var p = document.createElement("p");
-console.log(p)
-var msg = document.createTextNode("Click a menu item to view a picture.");
-p.appendChild(msg);
-menu.insertBefore(msg, espresso);
+$('img').hide();
 
-var menuItems = menu.getElementsByClassName("menu-item");
 
-var item;
-for (var i = 0; i < menuItems.length; i++ ) {
-    item = menuItems[i];
+// Placing the text
 
-    // This next line no longer works 
-    // the .hide has been removed from the CSS file
-    item.nextElementSibling.setAttribute("class", "hide");
+$('h2').after('<p>Click on an Item to view the picture!</p>');
 
-    // Attach event handler
-    item.onclick = function () {
 
-        imgSrc = this.nextElementSibling.getAttribute("src");
-
-        document.getElementById("aside-image").setAttribute("src", imgSrc);
-        document.getElementById("aside-image").removeAttribute("class");
-    }
-}   
+var $listparts = $('li');
+$listparts.on('click',function(){
+    var $imgSrc = $(this).children('img').attr('Src');
+    var $altText = $(this).children('span').text();
+    $('aside').children().attr('src',$imgSrc);
+    $('aside').children().show();
+    
+    //Putting the names where it should be. 
+    
+    
+    
+    
+    
+});
