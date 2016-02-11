@@ -1,5 +1,5 @@
 $(function() {
-    $("h1").after("<p>Click a menu item to view a picture.</p>")
+    $("h2").after("<p>Click a menu item to view a picture.</p>")
 
     $(".menu-item").on("click", function() {
         var imgscr = $(this).next().attr("src"); 
