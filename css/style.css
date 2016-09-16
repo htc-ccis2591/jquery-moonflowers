@@ -20,9 +20,13 @@ section {
 
 .menu-item {
     font-size: 120%;
-	cursor: pointer;
+    cursor: pointer;
 }
 
+
+.hide {
+	display: none;
+}
 
 img {
     display: block;
