@@ -1,28 +1,16 @@
-var menu = document.getElementById("menu");
-var espresso = document.getElementById("espresso");
-
-var p = document.createElement("p");
-console.log(p)
-var msg = document.createTextNode("Click a menu item to view a picture.");
-p.appendChild(msg);
-menu.insertBefore(msg, espresso);
-
-var menuItems = menu.getElementsByClassName("menu-item");
-
-var item;
-for (var i = 0; i < menuItems.length; i++ ) {
-    item = menuItems[i];
-
-    // This next line no longer works 
-    // the .hide has been removed from the CSS file
-    item.nextElementSibling.setAttribute("class", "hide");
-
-    // Attach event handler
-    item.onclick = function () {
-
-        imgSrc = this.nextElementSibling.getAttribute("src");
-
-        document.getElementById("aside-image").setAttribute("src", imgSrc);
-        document.getElementById("aside-image").removeAttribute("class");
-    }
-}   
+(function () {
+//set up the variables
+var menu = $("#menu");      
+var espresso = $("#espresso");
+var menuItems = $("menu-item");
+// add the note about viewing the pictures
+espresso.before('<p>Click a menu item to view a picture</p>');
+// hide the images
+$('li img').hide();
+// add the click funtion for each menu item
+$('li').on("click", function(){
+    $("aside img").attr('class','img');
+    $("aside img").attr('src',this.lastChild.src);
+});
+}());
+  
