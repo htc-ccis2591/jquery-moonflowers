@@ -6,4 +6,4 @@ $(".menu-item").on("click", function () {
     var images = $(this).next().attr('src');
     $("#aside-image").attr('src', images);
     $('aside').removeClass("hide");
-});
+}); 
