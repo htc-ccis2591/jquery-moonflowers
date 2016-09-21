@@ -4,6 +4,7 @@ $("#menu img").hide();
 
 $(".menu-item").on("click", function () {
     var images = $(this).next().attr('src');
-    $("#aside-image").attr('src', images);
+    var aside = $("#aside-image").attr('src', images);
     $('aside').removeClass("hide");
+    console.log(aside);
 }); 
