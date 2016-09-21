@@ -10,7 +10,8 @@ $('li img').hide();
 // add the click funtion for each menu item
 $('li').on("click", function(){
     $("aside img").attr('class','img');
-    $("aside img").attr('src',this.lastChild.src);
+    imageSrc =$(this).children('img').attr('src');
+    $("aside img").attr('src',imageSrc);
 });
 }());
   
