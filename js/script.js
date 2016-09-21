@@ -1,28 +1,17 @@
-var menu = document.getElementById("menu");
-var espresso = document.getElementById("espresso");
+var $menuInstruction = $("<p>Click a menu item to view a picture</p>").insertBefore('#espresso');
+console.log($menuInstruction);
+var $menuItems = $('.menu-item');
+$menuItems.siblings().hide();
+var $listItems = $("li");
 
-var p = document.createElement("p");
-console.log(p)
-var msg = document.createTextNode("Click a menu item to view a picture.");
-p.appendChild(msg);
-menu.insertBefore(msg, espresso);
+$listItems.on("click", function () {
+    var $listItem = $(this);
 
-var menuItems = menu.getElementsByClassName("menu-item");
+    var $asideImage = $('#aside-image');
+    var $getImg = $listItem.children().last();
+    console.log($getImg);
+    var imgSrc = $getImg.attr("src");
 
-var item;
-for (var i = 0; i < menuItems.length; i++ ) {
-    item = menuItems[i];
+    $asideImage.attr("src", imgSrc);
 
-    // This next line no longer works 
-    // the .hide has been removed from the CSS file
-    item.nextElementSibling.setAttribute("class", "hide");
-
-    // Attach event handler
-    item.onclick = function () {
-
-        imgSrc = this.nextElementSibling.getAttribute("src");
-
-        document.getElementById("aside-image").setAttribute("src", imgSrc);
-        document.getElementById("aside-image").removeAttribute("class");
-    }
-}   
+});
