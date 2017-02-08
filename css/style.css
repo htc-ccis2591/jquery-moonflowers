@@ -4,14 +4,38 @@ article, aside, figure, figcaption, footer, header, nav, section {
 }
 
 body {
-	font-family: Papyrus, fantasy;
-    max-width: 600px;
+	font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    background-color: #FFF5E1;
+}
+
+header {
+    width: 100%;
+    padding: 10px 15px;
+    background-image: url("../images/moonflower.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: #80B7B3;
+}
+
+h1, h2, h3 {
+    font-family: Papyrus, fantasy, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
+h1 {
+    margin-top: 25px;
+    margin-bottom: 5px;
+    color: #FFDB97;
+    text-shadow: 2px 2px 3px #000000;
 }
 
 aside {
 	margin: 50px 20px 10px 0;
 	width: 175px;
 	float: right;
+}
+aside {
+    color: #000000;
+    padding: 10px;
 }
 
 section {
@@ -30,6 +54,7 @@ img {
 ul {
 	padding-left: 45px;
 }
+
 li {
 	padding-bottom: .25em;
 }
